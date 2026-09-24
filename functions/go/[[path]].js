@@ -96,10 +96,7 @@ export async function onRequest(context) {
 </html>`;
 
       return new Response(latestPageTemplate, {
-        headers: { 
-          "Content-Type": "text/html;charset=UTF-8",
-          "Cache-Control": "public, max-age=3600" // Cache selama 1 jam
-        }
+        headers: { "Content-Type": "text/html;charset=UTF-8" }
       });
     } catch (err) {
       console.error(err);
@@ -275,10 +272,7 @@ export async function onRequest(context) {
 </html>`;
 
         return new Response(htmlTemplate, {
-          headers: { 
-            "Content-Type": "text/html;charset=UTF-8",
-            "Cache-Control": "public, max-age=3600" // Cache selama 1 jam
-          }
+          headers: { "Content-Type": "text/html;charset=UTF-8" }
         });
       }
     }
